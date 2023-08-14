@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application and variables
 import inquirer from "inquirer";
 import fs from 'fs/promises';
 let badgeUrl;
 let licenseUrl;
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = await inquirer 
 .prompt([ {
     type: 'input',
@@ -58,11 +58,6 @@ const questions = await inquirer
   }
 ]);
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
 function generateLicense(license) {
     if (questions.license === 'MIT') {
         badgeUrl = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
@@ -75,8 +70,7 @@ function generateLicense(license) {
         licenseUrl = 'https://opendatacommons.org/licenses/by/'
     }
 }
-// Function call to initialize app
-init();
+
 console.log(questions);
 generateLicense();
 
@@ -123,4 +117,6 @@ ${questions.tests}
 Please email me at ${questions.email} for any further questions`
 
 console.log(readmeText)
+
+// Writes README file
 fs.writeFile('README.md', readmeText)
