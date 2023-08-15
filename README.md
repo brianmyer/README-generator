@@ -42,3 +42,5 @@ N/A
 Please email me at myer.brian@gmail.com for any further questions
 
 [Link to Screencastify video](https://watch.screencastify.com/v/QSHREXtoT25VYd7q53ua)
+
+[Git repository](https://github.com/brianmyer/README-generator)
